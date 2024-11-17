@@ -2,9 +2,9 @@ CREATE TABLE [dbo].[BillDetailsTable] (
     [Id]          INT            IDENTITY (1, 1) NOT NULL,
     [BillId]      NVARCHAR (50)  NULL,
     [ProductName] NVARCHAR (100) NULL,
-    [Price]       INT            NULL,
-    [Quantity]    INT            NULL,
-    [Total]       INT            NULL,
+    [Price]       FLOAT            NULL,
+    [Quantity]    FLOAT            NULL,
+    [Total]       FLOAT            NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
@@ -13,10 +13,10 @@ CREATE TABLE [dbo].[BillInfoTable] (
     [BillId]        NVARCHAR (50)  NULL,
     [CustomerName]  NVARCHAR (100) NULL,
     [ContactNo]     NVARCHAR (10)  NULL,
-    [Total]         INT            NULL,
-    [Discount]      INT            NULL,
-    [DiscountPrice] INT            NULL,
-    [GrandTotal]    INT            NULL,
+    [Total]         FLOAT            NULL,
+    [Discount]      FLOAT            NULL,
+    [DiscountPrice] FLOAT            NULL,
+    [GrandTotal]    FLOAT            NULL,
     [BillDate]      DATE           NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
